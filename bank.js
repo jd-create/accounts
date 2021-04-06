@@ -63,6 +63,7 @@ console.log(
 if (account.pin === pinInput) {
   console.log("CHECK!");
   const saldo = account.saldo;
+  console.log("Uw saldo bedraagt: €" + saldo);
 }
 
 // DESIRED OUTPUT
