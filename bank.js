@@ -14,9 +14,9 @@
 
 // Stappen
 // - variabelen aanmaken
-//  [X] Rekeningen aanmaken (dummy data)
-//  - id nodig (dummy input)
-//  - pin nodig (dummy input)
+//  X Rekeningen aanmaken (dummy data)
+//  X id nodig (dummy input)
+//  X pin nodig (dummy input)
 // - zoeken naar rekening met de id uit de input
 // - checken: is de pin correct?
 // - Saldo uit object halen
@@ -32,6 +32,28 @@ const accounts = [
 
 const idInput = 2;
 const pinInput = "9876";
+
+// console.log(accounts);
+
+let account;
+
+switch (idInput) {
+  case 1:
+    account = accounts[0];
+    break;
+  case 2:
+    account = accounts[1];
+    break;
+  case 3:
+    account = accounts[2];
+    break;
+
+  default:
+    account = null;
+    break;
+}
+
+console.log(account);
 
 // DESIRED OUTPUT
 // Uw saldo bedraagt: €3300
