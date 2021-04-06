@@ -30,10 +30,21 @@ const accounts = [
 
 // SCENARIO 1 (happy path! 😃)
 
-const idInput = 2;
-const pinInput = "9876";
+// const idInput = 2;
+// const pinInput = "9876";
+
+// DESIRED OUTPUT
+// Uw saldo bedraagt: €3300
 
 // console.log(accounts);
+
+// SCENARIO 2 (unhappy path 🥵)
+
+const idInput = 2;
+const pinInput = "1111";
+
+// DESIRED OUTPUT
+// Uw pincode is niet correct, probeer het nog eens
 
 let account;
 
@@ -64,18 +75,9 @@ if (account.pin === pinInput) {
   console.log("CHECK!");
   const saldo = account.saldo;
   console.log("Uw saldo bedraagt: €" + saldo);
+} else {
+  console.log("Uw pincode is niet correct, probeer het nog eens");
 }
-
-// DESIRED OUTPUT
-// Uw saldo bedraagt: €3300
-
-// SCENARIO 2 (unhappy path 🥵)
-
-// const idInput = 2;
-// const pinInput = "1111";
-
-// DESIRED OUTPUT
-// Uw pincode is niet correct, probeer het nog eens
 
 // Geld storten
 // Geld opnemen
