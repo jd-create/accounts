@@ -17,8 +17,8 @@
 //  X Rekeningen aanmaken (dummy data)
 //  X id nodig (dummy input)
 //  X pin nodig (dummy input)
-// - zoeken naar rekening met de id uit de input
-// - checken: is de pin correct?
+// x zoeken naar rekening met de id uit de input
+// x checken: is de pin correct?
 // - Saldo uit object halen
 // - Saldo weergeven
 
@@ -53,7 +53,16 @@ switch (idInput) {
     break;
 }
 
-console.log(account);
+console.log(
+  "WHICH PIN DO WE NEED:",
+  account.pin,
+  pinInput,
+  account.pin === pinInput
+);
+
+if (account.pin === pinInput) {
+  console.log("CHECK!");
+}
 
 // DESIRED OUTPUT
 // Uw saldo bedraagt: €3300
