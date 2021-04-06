@@ -22,24 +22,24 @@
 // Output: Saldo
 
 // Stappen
-// - variabelen aanmaken
+// x variabelen aanmaken
 //  X Rekeningen aanmaken (dummy data)
 //  X id nodig (dummy input)
-//  X pin nodig (dummy input)
-// x zoeken naar rekening met de id uit de input
+//  X iban nodig (dummy input)
+// - zoeken naar rekening met de iban uit de input
 // x checken: is de pin correct?
 // x Saldo uit object halen
 // x Saldo weergeven
 
 const accounts = [
-  { id: 1, name: "Tim", nummer: "INGB110000999911", pin: "1234", saldo: 250 }, // 0
-  { id: 2, name: "Nina", nummer: "INGB110000999922", pin: "9876", saldo: 3300 }, // 1
-  { id: 3, name: "Karel", nummer: "INGB110000999987", pin: "0001", saldo: 10 }, // 2
+  { id: 1, name: "Tim", iban: "INGB110000999911", pin: "1234", saldo: 250 }, // 0
+  { id: 2, name: "Nina", iban: "INGB110000999922", pin: "9876", saldo: 3300 }, // 1
+  { id: 3, name: "Karel", iban: "INGB110000999987", pin: "0001", saldo: 10 }, // 2
 ];
 
 // SCENARIO 1 (happy path! 😃)
 
-const idInput = 2;
+const ibanInput = "INGB110000999922"; // -> 1
 const pinInput = "9876";
 
 // DESIRED OUTPUT
@@ -55,7 +55,7 @@ const pinInput = "9876";
 // DESIRED OUTPUT
 // Uw pincode is niet correct, probeer het nog eens
 
-let account = accounts[idInput - 1];
+let account = accounts[iban - 1];
 
 console.log(
   "WHICH PIN DO WE NEED:",
