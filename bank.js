@@ -45,18 +45,24 @@ const pinInput = "9876";
 
 let account;
 
-for (let index = 0; index < accounts.length; index = index + 1) {
-  //   console.log("COUNTING:", index);
-  //   console.log(accounts[index].iban, ibanInput);
-  //   console.log(accounts[index].iban === ibanInput);
-  if (accounts[index].iban === ibanInput) {
-    account = accounts[index];
-  }
-}
+// for (let index = 0; index < accounts.length; index = index + 1) {
+//   //   console.log("COUNTING:", index);
+//   //   console.log(accounts[index].iban, ibanInput);
+//   //   console.log(accounts[index].iban === ibanInput);
+//   if (accounts[index].iban === ibanInput) {
+//     account = accounts[index];
+//   }
+// }
 
 // console.log(accounts[0].iban, ibanInput, accounts[0].iban === ibanInput);
 // console.log(accounts[1].iban, ibanInput, accounts[1].iban === ibanInput);
 // console.log(accounts[2].iban, ibanInput, accounts[2].iban === ibanInput);
+
+for (const element of accounts) {
+  if (element.iban === ibanInput) {
+    account = element;
+  }
+}
 
 // DESIRED OUTPUT
 // Uw saldo bedraagt: €3300
