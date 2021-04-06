@@ -35,12 +35,28 @@ const accounts = [
   { id: 1, name: "Tim", iban: "INGB110000999911", pin: "1234", saldo: 250 }, // 0
   { id: 2, name: "Nina", iban: "INGB110000999922", pin: "9876", saldo: 3300 }, // 1
   { id: 3, name: "Karel", iban: "INGB110000999987", pin: "0001", saldo: 10 }, // 2
+  { id: 4, name: "Sjaan", iban: "INGB110000999989", pin: "0222", saldo: 10000 }, // 2
 ];
 
 // SCENARIO 1 (happy path! 😃)
 
 const ibanInput = "INGB110000999922"; // -> 1
 const pinInput = "9876";
+
+let account;
+
+for (let index = 0; index < accounts.length; index = index + 1) {
+  //   console.log("COUNTING:", index);
+  //   console.log(accounts[index].iban, ibanInput);
+  //   console.log(accounts[index].iban === ibanInput);
+  if (accounts[index].iban === ibanInput) {
+    account = accounts[index];
+  }
+}
+
+// console.log(accounts[0].iban, ibanInput, accounts[0].iban === ibanInput);
+// console.log(accounts[1].iban, ibanInput, accounts[1].iban === ibanInput);
+// console.log(accounts[2].iban, ibanInput, accounts[2].iban === ibanInput);
 
 // DESIRED OUTPUT
 // Uw saldo bedraagt: €3300
@@ -55,14 +71,14 @@ const pinInput = "9876";
 // DESIRED OUTPUT
 // Uw pincode is niet correct, probeer het nog eens
 
-let account = accounts[iban - 1];
+// let account = accounts[iban - 1];
 
-console.log(
-  "WHICH PIN DO WE NEED:",
-  account.pin,
-  pinInput,
-  account.pin === pinInput
-);
+// console.log(
+//   "WHICH PIN DO WE NEED:",
+//   account.pin,
+//   pinInput,
+//   account.pin === pinInput
+// );
 
 if (account.pin === pinInput) {
   console.log("CHECK!");
