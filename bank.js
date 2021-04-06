@@ -62,6 +62,7 @@ console.log(
 
 if (account.pin === pinInput) {
   console.log("CHECK!");
+  const saldo = account.saldo;
 }
 
 // DESIRED OUTPUT
